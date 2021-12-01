@@ -6,7 +6,7 @@
         <navigation-bar-item>
           <i slot="nav-item-left" class="iconfont icon-category"></i>
           <div class="nav-center" slot="nav-item-center">
-            <span style="color: red;">JD</span><span style="margin-left: 7px;font-size: 16px;color: #c4cabc">|</span>
+            <span style="color: red;float: left;margin-left: 20px;">JD</span><span style="margin-left: 7px;font-size: 16px;color: #c4cabc;float: left">|</span>
             <input class="nav-center-input" type="text" value="请输入">
           </div>
           <div slot="nav-item-right">登录</div>
@@ -117,28 +117,24 @@
           <span slot="product-item-desc">拉面说 招牌日式豚骨叉烧拉面方便速食拌面非油炸拉面216.8g</span>
           <span slot="product-item-price">￥88</span>
           <span slot="product-item-lable">闪购</span>
-          <span slot="product-item-tag">看相似</span>
         </product-item>
         <product-item>
           <img slot="product-item-img" src="../assets/img/category/21.png" width="100%" alt="">
           <span slot="product-item-desc">美国belli孕妇防晒霜孕妇专用护肤品怀孕期哺乳期用化妆品孕产妇隔离霜孕妇BB霜</span>
           <span slot="product-item-price">￥288</span>
           <span slot="product-item-lable">闪购</span>
-          <span slot="product-item-tag">看相似</span>
         </product-item>
         <product-item>
           <img slot="product-item-img" src="../assets/img/category/11.jpg" width="100%" alt="">
           <span slot="product-item-desc">昂秀外语 21天搞定全部英语语法—英语入门英语口语学习必经之路</span>
           <span slot="product-item-price">￥99</span>
           <span slot="product-item-lable">闪购</span>
-          <span slot="product-item-tag">看相似</span>
         </product-item>
         <product-item>
           <img slot="product-item-img" src="../assets/img/category/12.jpg" width="100%" alt="">
           <span slot="product-item-desc">拉面说 招牌日式豚骨叉烧拉面方便速食拌面非油炸拉面216.8g</span>
           <span slot="product-item-price">88</span>
           <span slot="product-item-lable">闪购</span>
-          <span slot="product-item-tag">看相似</span>
         </product-item>
       </div>
     </div>
@@ -166,12 +162,12 @@
 </template>
 
 <script>
-  import TabBar from '../components/tabbar/TabBar'
-  import TabBarItem from '../components/tabbar/TabBarItem'
-  import NavigationBar from  '../components/navigation/NavigationBar'
-  import NavigationBarItem from  '../components/navigation/NavigationBarItem'
-  import ProductCategoryItem from '../components/category/ProductCategoryItem'
-  import ProductItem from '../components/product/ProductItem'
+  import TabBar from '@/components/tabbar/TabBar'
+  import TabBarItem from '@/components/tabbar/TabBarItem'
+  import NavigationBar from  '@/components/navigation/NavigationBar'
+  import NavigationBarItem from  '@/components/navigation/NavigationBarItem'
+  import ProductCategoryItem from '@/components/category/ProductCategoryItem'
+  import ProductItem from '@/components/product/ProductItem'
   export default {
     name: 'Home',
     components:{
@@ -185,11 +181,11 @@
     data() {
       return {
         imgList: [
-          require('../assets/img/category/4.jpg'),
-          require('../assets/img/category/5.jpg'),
-          require('../assets/img/category/6.jpg'),
-          require('../assets/img/category/7.jpg'),
-          require('../assets/img/category/8.jpg'),
+          require('@/assets/img/category/4.jpg'),
+          require('@/assets/img/category/5.jpg'),
+          require('@/assets/img/category/6.jpg'),
+          require('@/assets/img/category/7.jpg'),
+          require('@/assets/img/category/8.jpg'),
         ],
         n: 0,
       }
@@ -259,19 +255,21 @@
   }
   .nav-center{
     height: 30px;
-    width: 100%;
+    width: 270px;
     border: 0;
     line-height: 30px;
     border-radius: 15px;
     background-color: white;
     margin-top: 8px;
-    font-size: 19px;
     color: gray;
   }
   .nav-center-input{
     border: 0;
+    width: 100px;
     color: gray;
-    margin-left: 20px;
+    position: absolute;
+    top: 13px;
+    left: 130px;
   }
   .content-category{
     height: 180px;
@@ -292,7 +290,7 @@
     height: 2.5rem;
     margin-top: 0.4rem;
     margin-right: 0.25rem;
-    margin-left: 0.5rem;
+    margin-left: -13rem;
     font-size: .8rem;
     color: #333;
   }
